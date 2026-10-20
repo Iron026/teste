@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------
+ * IDENTIDADE VISUAL — tokens de design
+ * Altere as cores aqui para mudar a paleta de todo o portfólio.
+ * ------------------------------------------------------------------ */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Manrope Variable', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Azul-marinho profundo */
+  --color-ink-950: #050c1a;
+  --color-ink-900: #0a1730;
+  --color-ink-800: #102246;
+  --color-ink-700: #1a3260;
+  --color-ink-600: #2a4578;
+
+  /* Azul elétrico (destaque principal) */
+  --color-accent-300: #9db8ff;
+  --color-accent-400: #6b93ff;
+  --color-accent-500: #3d6dff;
+  --color-accent-600: #2453e6;
+  --color-accent-700: #1b41b8;
+
+  /* Verde-água (detalhes sobre fundo escuro) */
+  --color-aqua-300: #7ee8d8;
+  --color-aqua-400: #3fd6c0;
+  --color-aqua-500: #19b8a2;
+
+  --shadow-card: 0 1px 2px rgb(10 23 48 / 0.04), 0 8px 24px -12px rgb(10 23 48 / 0.12);
+  --shadow-card-hover: 0 2px 4px rgb(10 23 48 / 0.05), 0 24px 48px -20px rgb(10 23 48 / 0.28);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-white font-sans text-slate-700 antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink-900;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  ::selection {
+    background: var(--color-accent-300);
+    color: var(--color-ink-950);
+  }
+  [id] {
+    scroll-margin-top: 5.5rem;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+/* Grade sutil usada em fundos escuros */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Animação de entrada ao rolar (ativada por useReveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
