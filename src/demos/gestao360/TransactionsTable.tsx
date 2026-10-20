@@ -108,7 +108,7 @@ export function TransactionsTable({ rows, fileSuffix }: { rows: Transaction[]; f
                   <td className="whitespace-nowrap px-4 py-3 tabular-nums text-slate-600">{formatDate(t.date)}</td>
                   <td className="px-4 py-3">
                     <span className="block font-medium text-slate-900">{t.description}</span>
-                    <span className="font-mono text-[0.7rem] text-slate-400">{t.id}</span>
+                    <span className="font-mono text-[0.7rem] text-slate-500">{t.id}</span>
                   </td>
                   <td className="px-4 py-3 text-slate-600">{t.category}</td>
                   <td className="whitespace-nowrap px-4 py-3 text-slate-600">{t.method}</td>

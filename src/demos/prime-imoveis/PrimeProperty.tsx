@@ -62,7 +62,7 @@ export default function PrimeProperty() {
         </div>
         <div className="text-right">
           <p className="text-3xl font-bold text-[#1f2b26]">{formatPrice(p)}</p>
-          {p.condo && <p className="text-sm text-[#8a816f]">Condomínio: {formatBRL(p.condo)}/mês</p>}
+          {p.condo && <p className="text-sm text-[#6b6455]">Condomínio: {formatBRL(p.condo)}/mês</p>}
         </div>
       </div>
 
@@ -116,7 +116,7 @@ export default function PrimeProperty() {
                 aria-current={i === index}
                 className={cn(
                   'block w-full overflow-hidden rounded-xl ring-2 transition-all',
-                  i === index ? 'ring-[#a67c3d]' : 'opacity-70 ring-transparent hover:opacity-100',
+                  i === index ? 'ring-[#87612a]' : 'opacity-70 ring-transparent hover:opacity-100',
                 )}
               >
                 <PropertyArt scene={s} palette={p.palette} variant={variantOf(p)} className="aspect-[16/10] w-full" />
@@ -131,9 +131,9 @@ export default function PrimeProperty() {
           <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             {stats.map(({ icon: Icon, label, value }) => (
               <li key={label} className="rounded-2xl border border-[#e8e1d4] bg-white p-4">
-                <Icon aria-hidden="true" className="h-5 w-5 text-[#a67c3d]" />
+                <Icon aria-hidden="true" className="h-5 w-5 text-[#87612a]" />
                 <p className="mt-3 text-2xl font-bold text-[#1f2b26]">{value}</p>
-                <p className="text-sm text-[#8a816f]">{label}</p>
+                <p className="text-sm text-[#6b6455]">{label}</p>
               </li>
             ))}
           </ul>
@@ -147,7 +147,7 @@ export default function PrimeProperty() {
               {p.features.map((f) => (
                 <li key={f} className="flex items-center gap-2.5 text-[#3b3a36]">
                   <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#efe9dd]">
-                    <Check aria-hidden="true" className="h-3.5 w-3.5 text-[#a67c3d]" />
+                    <Check aria-hidden="true" className="h-3.5 w-3.5 text-[#87612a]" />
                   </span>
                   {f}
                 </li>
@@ -159,7 +159,7 @@ export default function PrimeProperty() {
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <div className="rounded-3xl border border-[#e8e1d4] bg-white p-6 shadow-[0_20px_50px_-30px_rgb(31_43_38/0.35)]">
             <h2 className="font-serif text-xl font-semibold text-[#1f2b26]">Agende uma visita</h2>
-            <p className="mb-5 mt-1 text-sm text-[#8a816f]">Imóvel {p.code}</p>
+            <p className="mb-5 mt-1 text-sm text-[#6b6455]">Imóvel {p.code}</p>
             <InterestForm key={p.id} subject={`${p.code} (${p.title})`} />
           </div>
         </aside>

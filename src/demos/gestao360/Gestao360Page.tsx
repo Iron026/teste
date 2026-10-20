@@ -113,7 +113,7 @@ export default function Gestao360Page() {
                 Gestão<span className="text-[#6fb0ff]">360</span>
               </span>
             </Link>
-            <p className="text-xs text-slate-500 lg:mt-6">Empresa Exemplo Ltda. (fictícia)</p>
+            <p className="text-xs text-slate-400 lg:mt-6">Empresa Exemplo Ltda. (fictícia)</p>
           </div>
           <nav aria-label="Seções do painel" className="overflow-x-auto border-t border-white/5 px-3 lg:border-0">
             <ul className="flex gap-1 py-2 lg:flex-col lg:py-0">
@@ -144,7 +144,7 @@ export default function Gestao360Page() {
           <header id="visao-geral" className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h1 className="font-display text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">Visão geral</h1>
-              <p className="mt-1 text-sm text-slate-500">
+              <p className="mt-1 text-sm text-slate-600">
                 {validPeriod ? (
                   <>
                     Período: {formatDate(period.start)} a {formatDate(period.end)}
@@ -312,7 +312,7 @@ export default function Gestao360Page() {
             <TransactionsTable rows={rows} fileSuffix={`${period.start}_${period.end}`} />
           </section>
 
-          <p className="mt-6 text-center text-xs text-slate-500">
+          <p className="mt-6 text-center text-xs text-slate-600">
             Gestão360 é um projeto demonstrativo. Empresa, transações e valores são fictícios.{' '}
             <a href={XLSX_HREF} download className="font-semibold text-accent-700 underline-offset-2 hover:underline">
               Baixar a planilha XLSX de exemplo

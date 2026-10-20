@@ -112,7 +112,7 @@ export function InterestForm({ subject }: { subject?: string }) {
       >
         Quero falar com um corretor
       </button>
-      <p className="flex gap-2 text-xs leading-relaxed text-[#8a816f]">
+      <p className="flex gap-2 text-xs leading-relaxed text-[#6b6455]">
         <Info aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0" />
         Demonstração: os dados são apenas validados no navegador e não são enviados nem armazenados.
       </p>

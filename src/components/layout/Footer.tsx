@@ -18,7 +18,7 @@ export function Footer() {
         <div className="max-w-sm">
           <Logo tone="light" />
           <p className="mt-5 text-sm leading-relaxed">{siteConfig.description}</p>
-          <p className="mt-4 text-xs leading-relaxed text-slate-500">
+          <p className="mt-4 text-xs leading-relaxed text-slate-400">
             Os projetos apresentados são demonstrativos e autorais. Empresas, produtos, imóveis e valores exibidos são
             fictícios.
           </p>

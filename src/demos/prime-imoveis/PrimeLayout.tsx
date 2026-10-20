@@ -16,7 +16,7 @@ function PrimeLogo({ light = false }: { light?: boolean }) {
         <rect x="13.5" y="15" width="5" height="7" fill="#c9a46a" />
       </svg>
       <span className={cn('font-serif text-xl font-semibold tracking-tight', light ? 'text-white' : 'text-[#1f2b26]')}>
-        Prime <span className="font-normal italic text-[#a67c3d]">Imóveis</span>
+        Prime <span className={cn('font-normal italic', light ? 'text-[#d4b483]' : 'text-[#755422]')}>Imóveis</span>
       </span>
     </span>
   )
@@ -71,7 +71,7 @@ export default function PrimeLayout() {
           </nav>
           <Link
             to={`${BASE}#contato`}
-            className="hidden rounded-lg bg-[#a67c3d] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#8d6830] md:inline-flex"
+            className="hidden rounded-lg bg-[#87612a] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#6e4f20] md:inline-flex"
           >
             Fale com um corretor
           </Link>
@@ -96,7 +96,7 @@ export default function PrimeLayout() {
               </li>
             ))}
             <li>
-              <Link to={`${BASE}#contato`} className="mt-2 block rounded-lg bg-[#a67c3d] px-3 py-3 text-center font-semibold text-white">
+              <Link to={`${BASE}#contato`} className="mt-2 block rounded-lg bg-[#87612a] px-3 py-3 text-center font-semibold text-white">
                 Fale com um corretor
               </Link>
             </li>
@@ -135,7 +135,7 @@ export default function PrimeLayout() {
             <p className="mt-3 leading-relaxed">Curitiba · Florianópolis · Belo Horizonte · Campinas</p>
           </div>
         </div>
-        <p className="border-t border-white/10 px-4 py-5 text-center text-xs text-[#8f8a7d]">
+        <p className="border-t border-white/10 px-4 py-5 text-center text-xs text-[#b3ad9f]">
           Demonstração de portfólio — nenhuma informação é enviada ou armazenada.
         </p>
       </footer>

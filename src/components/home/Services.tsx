@@ -33,7 +33,7 @@ export function Services() {
                     <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-ink-900 text-aqua-300 transition-colors group-hover:bg-accent-600 group-hover:text-white">
                       <Icon aria-hidden="true" className="h-6 w-6" />
                     </span>
-                    <span className="font-mono text-xs text-slate-400">0{i + 1}</span>
+                    <span className="font-mono text-xs text-slate-500">0{i + 1}</span>
                   </div>
                   <h3 className="mt-6 text-xl font-bold">{service.title}</h3>
                   <p className="mt-3 leading-relaxed text-slate-600">{service.description}</p>

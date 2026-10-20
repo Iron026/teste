@@ -8,7 +8,7 @@ import { PropertyCard } from './PropertyCard'
 import { applyFilters, readFilters, type Filters } from './utils'
 
 const control =
-  'h-11 w-full rounded-xl border border-[#e8e1d4] bg-white px-3 text-sm text-[#1f2b26] focus:border-[#a67c3d] focus:outline-none focus:ring-4 focus:ring-[#a67c3d]/15'
+  'h-11 w-full rounded-xl border border-[#e8e1d4] bg-white px-3 text-sm text-[#1f2b26] focus:border-[#87612a] focus:outline-none focus:ring-4 focus:ring-[#87612a]/15'
 
 export default function PrimeCatalog() {
   useSeo({ title: 'Imóveis — Prime Imóveis (demonstração)', noindex: true })
@@ -95,7 +95,7 @@ export default function PrimeCatalog() {
               onClick={() => update('quartos', n)}
               className={cn(
                 'h-10 rounded-lg border px-1 text-sm font-semibold transition-colors',
-                filters.quartos === n ? 'border-[#1f2b26] bg-[#1f2b26] text-white' : 'border-[#e8e1d4] bg-white text-[#5b584f] hover:border-[#a67c3d]',
+                filters.quartos === n ? 'border-[#1f2b26] bg-[#1f2b26] text-white' : 'border-[#e8e1d4] bg-white text-[#5b584f] hover:border-[#87612a]',
               )}
             >
               {n ? `${n}+` : 'Todos'}
@@ -104,7 +104,7 @@ export default function PrimeCatalog() {
         </div>
       </fieldset>
       {activeCount > 0 && (
-        <button type="button" onClick={clear} className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#a67c3d] hover:underline">
+        <button type="button" onClick={clear} className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#87612a] hover:underline">
           <X aria-hidden="true" className="h-4 w-4" /> Limpar filtros
         </button>
       )}
@@ -118,7 +118,7 @@ export default function PrimeCatalog() {
       <div className="mt-6 flex gap-3">
         <label className="relative flex-1">
           <span className="sr-only">Buscar por palavra-chave</span>
-          <Search aria-hidden="true" className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#8a816f]" />
+          <Search aria-hidden="true" className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#6b6455]" />
           <input
             type="search"
             value={filters.q}
@@ -135,7 +135,7 @@ export default function PrimeCatalog() {
           className="inline-flex h-12 items-center gap-2 rounded-xl border border-[#e8e1d4] bg-white px-4 text-sm font-semibold text-[#1f2b26] lg:hidden"
         >
           <SlidersHorizontal aria-hidden="true" className="h-4 w-4" /> Filtros
-          {activeCount > 0 && <span className="rounded-full bg-[#a67c3d] px-1.5 text-xs text-white">{activeCount}</span>}
+          {activeCount > 0 && <span className="rounded-full bg-[#87612a] px-1.5 text-xs text-white">{activeCount}</span>}
         </button>
       </div>
 
@@ -147,7 +147,10 @@ export default function PrimeCatalog() {
           {filterPanel}
         </div>
 
-        <section aria-label="Resultados">
+        <section aria-labelledby="resultados-titulo">
+          <h2 id="resultados-titulo" className="sr-only">
+            Resultados
+          </h2>
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p role="status" aria-live="polite" className="text-sm text-[#6b665b]">
               <strong className="text-[#1f2b26]">{results.length}</strong> {results.length === 1 ? 'imóvel encontrado' : 'imóveis encontrados'}
@@ -171,7 +174,7 @@ export default function PrimeCatalog() {
             </div>
           ) : (
             <div className="mt-5 flex flex-col items-center rounded-2xl border border-dashed border-[#d9cfbd] bg-white px-6 py-16 text-center">
-              <SearchX aria-hidden="true" className="h-10 w-10 text-[#a67c3d]" />
+              <SearchX aria-hidden="true" className="h-10 w-10 text-[#87612a]" />
               <h2 className="mt-4 font-serif text-xl font-semibold text-[#1f2b26]">Nenhum imóvel encontrado</h2>
               <p className="mt-2 max-w-sm text-sm text-[#6b665b]">Tente remover algum filtro ou buscar por outra palavra-chave.</p>
               <button type="button" onClick={clear} className="mt-5 rounded-xl bg-[#1f2b26] px-5 py-2.5 text-sm font-semibold text-white">

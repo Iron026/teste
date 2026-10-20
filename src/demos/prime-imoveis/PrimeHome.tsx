@@ -9,7 +9,7 @@ import { InterestForm } from './InterestForm'
 import { BASE } from './utils'
 
 const selectCls =
-  'h-12 w-full rounded-xl border border-[#e8e1d4] bg-white px-3 text-sm text-[#1f2b26] focus:border-[#a67c3d] focus:outline-none focus:ring-4 focus:ring-[#a67c3d]/15'
+  'h-12 w-full rounded-xl border border-[#e8e1d4] bg-white px-3 text-sm text-[#1f2b26] focus:border-[#87612a] focus:outline-none focus:ring-4 focus:ring-[#87612a]/15'
 
 export default function PrimeHome() {
   useSeo({ title: 'Prime Imóveis (demonstração)', description: 'Demonstração de portal imobiliário com catálogo, filtros e página de imóvel.', noindex: true })
@@ -36,7 +36,7 @@ export default function PrimeHome() {
       <section className="relative overflow-hidden">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-12 sm:px-6 lg:grid-cols-2 lg:pt-20">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#a67c3d]">Imóveis selecionados</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#87612a]">Imóveis selecionados</p>
             <h1 className="mt-4 font-serif text-4xl font-semibold leading-[1.1] tracking-tight text-[#1f2b26] sm:text-6xl">
               Encontre o lugar certo para a próxima fase da sua vida.
             </h1>
@@ -53,10 +53,10 @@ export default function PrimeHome() {
               className="absolute -bottom-6 left-6 right-6 flex items-center justify-between gap-4 rounded-2xl bg-white/95 p-4 shadow-xl backdrop-blur sm:left-auto sm:w-80"
             >
               <span>
-                <span className="block text-xs text-[#8a816f]">Destaque · {hero.city}</span>
+                <span className="block text-xs text-[#6b6455]">Destaque · {hero.city}</span>
                 <span className="block font-serif font-semibold text-[#1f2b26]">{hero.title}</span>
               </span>
-              <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 text-[#a67c3d]" />
+              <ArrowRight aria-hidden="true" className="h-5 w-5 shrink-0 text-[#87612a]" />
             </Link>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function PrimeHome() {
             <div className="grid gap-3 md:grid-cols-[2fr_1fr_1fr_auto]">
               <label className="relative">
                 <span className="sr-only">Palavra-chave</span>
-                <Search aria-hidden="true" className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#8a816f]" />
+                <Search aria-hidden="true" className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#6b6455]" />
                 <input
                   value={q}
                   onChange={(e) => setQ(e.target.value)}
@@ -112,7 +112,7 @@ export default function PrimeHome() {
                   ))}
                 </select>
               </label>
-              <button type="submit" className="h-12 rounded-xl bg-[#a67c3d] px-6 font-semibold text-white transition-colors hover:bg-[#8d6830]">
+              <button type="submit" className="h-12 rounded-xl bg-[#87612a] px-6 font-semibold text-white transition-colors hover:bg-[#6e4f20]">
                 Buscar
               </button>
             </div>
@@ -123,12 +123,12 @@ export default function PrimeHome() {
       <section aria-labelledby="destaques" className="mx-auto max-w-7xl px-4 pt-20 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#a67c3d]">Destaques</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#87612a]">Destaques</p>
             <h2 id="destaques" className="mt-2 font-serif text-3xl font-semibold text-[#1f2b26] sm:text-4xl">
               Imóveis em destaque
             </h2>
           </div>
-          <Link to={`${BASE}/imoveis`} className="inline-flex items-center gap-2 font-semibold text-[#1f2b26] hover:text-[#a67c3d]">
+          <Link to={`${BASE}/imoveis`} className="inline-flex items-center gap-2 font-semibold text-[#1f2b26] hover:text-[#87612a]">
             Ver todos os {properties.length} imóveis <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </Link>
         </div>
@@ -150,15 +150,15 @@ export default function PrimeHome() {
               <li key={c}>
                 <Link
                   to={`${BASE}/imoveis?cidade=${encodeURIComponent(c)}`}
-                  className="group flex items-center justify-between rounded-2xl border border-[#e8e1d4] bg-white p-5 transition-colors hover:border-[#a67c3d]"
+                  className="group flex items-center justify-between rounded-2xl border border-[#e8e1d4] bg-white p-5 transition-colors hover:border-[#87612a]"
                 >
                   <span>
                     <span className="block font-serif text-lg font-semibold text-[#1f2b26]">{c}</span>
-                    <span className="text-sm text-[#8a816f]">
+                    <span className="text-sm text-[#6b6455]">
                       {count} {count === 1 ? 'imóvel disponível' : 'imóveis disponíveis'}
                     </span>
                   </span>
-                  <ArrowRight aria-hidden="true" className="h-5 w-5 text-[#a67c3d] transition-transform group-hover:translate-x-1" />
+                  <ArrowRight aria-hidden="true" className="h-5 w-5 text-[#87612a] transition-transform group-hover:translate-x-1" />
                 </Link>
               </li>
             )
@@ -178,7 +178,7 @@ export default function PrimeHome() {
             { icon: ShieldCheck, title: 'Atendimento próximo', text: 'Contato direto com o corretor responsável.' },
           ].map(({ icon: Icon, title, text }) => (
             <li key={title} className="rounded-2xl bg-[#f3efe6] p-6">
-              <Icon aria-hidden="true" className="h-6 w-6 text-[#a67c3d]" />
+              <Icon aria-hidden="true" className="h-6 w-6 text-[#87612a]" />
               <h3 className="mt-4 font-serif text-lg font-semibold text-[#1f2b26]">{title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-[#6b665b]">{text}</p>
             </li>

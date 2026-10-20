@@ -80,6 +80,10 @@
     outline-offset: 2px;
     border-radius: 6px;
   }
+  /* Seções que recebem foco por programação (âncoras) não precisam de contorno */
+  [tabindex='-1']:focus {
+    outline: none;
+  }
   ::selection {
     background: var(--color-accent-300);
     color: var(--color-ink-950);

@@ -73,7 +73,7 @@ export function HeroVisual() {
         className="absolute -right-3 -top-8 hidden w-48 animate-float rounded-xl border border-slate-200/80 bg-white p-2.5 shadow-2xl shadow-black/30 sm:block lg:-right-8"
         style={{ animationDelay: '-3s' }}
       >
-        <div className="flex items-center gap-1.5 rounded-lg bg-slate-100 px-2 py-1.5 text-[0.6rem] text-slate-500">
+        <div className="flex items-center gap-1.5 rounded-lg bg-slate-100 px-2 py-1.5 text-[0.6rem] text-slate-600">
           <Search className="h-3 w-3" /> Buscar imóveis…
         </div>
         <div className="mt-2 h-16 rounded-lg bg-gradient-to-br from-sky-200 via-sky-100 to-amber-100">

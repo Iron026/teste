@@ -113,7 +113,7 @@ export function QuoteForm() {
         <div className="flex flex-col gap-2 sm:flex-row">
           <a
             href={mailtoUrl(company.email, `Orçamento: ${data.servico}`, summary(data))}
-            className="inline-flex h-12 items-center sm:flex-1 justify-center gap-2 rounded-xl bg-orange-600 px-5 font-semibold text-white hover:bg-orange-700"
+            className="inline-flex h-12 items-center sm:flex-1 justify-center gap-2 rounded-xl bg-orange-700 px-5 font-semibold text-white hover:bg-orange-800"
           >
             <Mail aria-hidden="true" className="h-4 w-4" /> Abrir no aplicativo de e-mail
           </a>
@@ -223,7 +223,7 @@ export function QuoteForm() {
             onChange={(e) => set('aceite', e.target.checked)}
             aria-invalid={!!errors.aceite}
             aria-describedby={errors.aceite ? 'ns-aceite-erro' : undefined}
-            className="mt-0.5 h-4 w-4 rounded border-slate-300 accent-orange-600"
+            className="mt-0.5 h-4 w-4 rounded border-slate-300 accent-orange-700"
           />
           Concordo em ser contatado(a) sobre este orçamento.
         </label>
@@ -234,7 +234,7 @@ export function QuoteForm() {
         )}
       </div>
 
-      <button type="submit" className="h-12 w-full rounded-xl bg-orange-600 px-5 font-semibold text-white shadow-[0_10px_24px_-10px_rgb(234_88_12/0.7)] transition-colors hover:bg-orange-700">
+      <button type="submit" className="h-12 w-full rounded-xl bg-orange-700 px-5 font-semibold text-white shadow-[0_10px_24px_-10px_rgb(234_88_12/0.7)] transition-colors hover:bg-orange-800">
         Revisar pedido de orçamento
       </button>
       <p id="ns-form-aviso" className="text-center text-xs text-slate-500">

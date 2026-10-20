@@ -59,6 +59,7 @@ export default function ArenaCatalog() {
         </label>
       </div>
 
+      <h2 className="sr-only">Lista de produtos</h2>
       <p role="status" aria-live="polite" className="mt-6 text-sm text-zinc-500">
         {list.length} {list.length === 1 ? 'produto' : 'produtos'}
       </p>

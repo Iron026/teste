@@ -16,11 +16,11 @@ const nav = [
 function NovaLogo({ light = false }: { light?: boolean }) {
   return (
     <span className="flex items-center gap-2">
-      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-orange-600 text-white">
+      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-orange-700 text-white">
         <Wrench aria-hidden="true" className="h-5 w-5" />
       </span>
       <span className={`font-display text-lg font-extrabold tracking-tight ${light ? 'text-white' : 'text-slate-900'}`}>
-        Nova<span className="text-orange-600">Serviços</span>
+        Nova<span className={light ? 'text-orange-400' : 'text-orange-700'}>Serviços</span>
       </span>
     </span>
   )
@@ -67,7 +67,7 @@ export default function NovaServicosPage() {
             </ul>
           </nav>
           <div className="flex items-center gap-2">
-            <a href="#orcamento" className="hidden h-10 items-center rounded-xl bg-orange-600 px-4 text-sm font-semibold text-white hover:bg-orange-700 sm:inline-flex">
+            <a href="#orcamento" className="hidden h-10 items-center rounded-xl bg-orange-700 px-4 text-sm font-semibold text-white hover:bg-orange-800 sm:inline-flex">
               Pedir orçamento
             </a>
             <button
@@ -104,13 +104,13 @@ export default function NovaServicosPage() {
                 <MapPin aria-hidden="true" className="h-3.5 w-3.5" /> {company.region}
               </p>
               <h1 className="mt-5 text-4xl font-extrabold leading-[1.08] tracking-tight text-slate-900 sm:text-5xl">
-                Manutenção da sua casa, <span className="text-orange-600">sem dor de cabeça.</span>
+                Manutenção da sua casa, <span className="text-orange-700">sem dor de cabeça.</span>
               </h1>
               <p className="mt-5 max-w-lg text-lg leading-relaxed text-slate-600">
                 Elétrica, hidráulica, pintura, montagem de móveis e pequenos reparos com horário agendado e orçamento antes do serviço.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a href="#orcamento" className="inline-flex h-13 items-center justify-center gap-2 rounded-xl bg-orange-600 px-6 font-semibold text-white shadow-[0_12px_28px_-12px_rgb(234_88_12/0.8)] hover:bg-orange-700">
+                <a href="#orcamento" className="inline-flex h-13 items-center justify-center gap-2 rounded-xl bg-orange-700 px-6 font-semibold text-white shadow-[0_12px_28px_-12px_rgb(234_88_12/0.8)] hover:bg-orange-800">
                   Pedir orçamento gratuito <ArrowRight aria-hidden="true" className="h-4 w-4" />
                 </a>
                 <a href="#servicos" className="inline-flex h-13 items-center justify-center rounded-xl border border-slate-300 bg-white px-6 font-semibold text-slate-800 hover:bg-slate-50">
@@ -120,7 +120,7 @@ export default function NovaServicosPage() {
               <ul className="mt-8 grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
                 {['Orçamento sem compromisso', 'Valor informado antes', 'Atendimento agendado', 'Local limpo ao final'].map((t) => (
                   <li key={t} className="flex items-center gap-2">
-                    <CheckCircle2 aria-hidden="true" className="h-4 w-4 text-orange-600" /> {t}
+                    <CheckCircle2 aria-hidden="true" className="h-4 w-4 text-orange-700" /> {t}
                   </li>
                 ))}
               </ul>
@@ -130,23 +130,23 @@ export default function NovaServicosPage() {
             <div aria-hidden="true" className="relative mx-auto w-full max-w-sm">
               <div className="absolute -right-6 -top-6 h-40 w-40 rounded-full bg-orange-200/60 blur-3xl" />
               <div className="relative rounded-3xl bg-white p-6 shadow-[0_30px_60px_-30px_rgb(15_23_42/0.35)] ring-1 ring-slate-200">
-                <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Pedido de orçamento</p>
+                <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Pedido de orçamento</p>
                 <p className="mt-2 text-lg font-bold text-slate-900">Troca de torneira da cozinha</p>
                 <div className="mt-5 space-y-3 text-sm">
                   <p className="flex items-center gap-3 text-slate-600">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-orange-50 text-orange-600">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-orange-50 text-orange-700">
                       <Wrench className="h-4 w-4" />
                     </span>
                     Hidráulica
                   </p>
                   <p className="flex items-center gap-3 text-slate-600">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-orange-50 text-orange-600">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-orange-50 text-orange-700">
                       <CalendarDays className="h-4 w-4" />
                     </span>
                     Quinta-feira
                   </p>
                   <p className="flex items-center gap-3 text-slate-600">
-                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-orange-50 text-orange-600">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-orange-50 text-orange-700">
                       <Clock3 className="h-4 w-4" />
                     </span>
                     Período da manhã
@@ -168,7 +168,7 @@ export default function NovaServicosPage() {
         {/* Serviços */}
         <section id="servicos" aria-labelledby="ns-servicos" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
           <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-wider text-orange-600">Serviços</p>
+            <p className="text-sm font-bold uppercase tracking-wider text-orange-700">Serviços</p>
             <h2 id="ns-servicos" className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
               O que fazemos por você
             </h2>
@@ -176,7 +176,7 @@ export default function NovaServicosPage() {
           <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {services.map(({ icon: Icon, title, text }) => (
               <li key={title} className="group rounded-2xl border border-slate-200 p-6 transition-all hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-lg hover:shadow-orange-100">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50 text-orange-600 transition-colors group-hover:bg-orange-600 group-hover:text-white">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50 text-orange-700 transition-colors group-hover:bg-orange-700 group-hover:text-white">
                   <Icon aria-hidden="true" className="h-5 w-5" />
                 </span>
                 <h3 className="mt-4 text-lg font-bold text-slate-900">{title}</h3>
@@ -206,7 +206,7 @@ export default function NovaServicosPage() {
 
         {/* Como funciona */}
         <section id="como-funciona" aria-labelledby="ns-como" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-20 sm:px-6">
-          <p className="text-sm font-bold uppercase tracking-wider text-orange-600">Como funciona</p>
+          <p className="text-sm font-bold uppercase tracking-wider text-orange-700">Como funciona</p>
           <h2 id="ns-como" className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             Do pedido ao serviço pronto em 4 passos
           </h2>
@@ -216,7 +216,7 @@ export default function NovaServicosPage() {
                 <span className="font-display text-5xl font-extrabold text-orange-200" aria-hidden="true">
                   {i + 1}
                 </span>
-                <Icon aria-hidden="true" className="absolute right-6 top-6 h-6 w-6 text-orange-600" />
+                <Icon aria-hidden="true" className="absolute right-6 top-6 h-6 w-6 text-orange-700" />
                 <h3 className="mt-2 text-lg font-bold text-slate-900">
                   <span className="sr-only">Passo {i + 1}: </span>
                   {title}
@@ -231,9 +231,9 @@ export default function NovaServicosPage() {
         <section className="bg-slate-50 py-20">
           <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr]">
             <div id="duvidas" className="scroll-mt-20">
-              <p className="text-sm font-bold uppercase tracking-wider text-orange-600">Dúvidas frequentes</p>
+              <p className="text-sm font-bold uppercase tracking-wider text-orange-700">Dúvidas frequentes</p>
               <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900">Perguntas comuns</h2>
-              <Accordion items={faq} className="mt-6 border-y border-slate-200" accentClassName="bg-orange-600 text-white" />
+              <Accordion items={faq} className="mt-6 border-y border-slate-200" accentClassName="bg-orange-700 text-white" />
             </div>
             <div id="orcamento" className="scroll-mt-20 rounded-3xl bg-white p-6 shadow-[0_30px_60px_-30px_rgb(15_23_42/0.3)] ring-1 ring-slate-200 sm:p-8">
               <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">Peça seu orçamento</h2>
@@ -258,7 +258,7 @@ export default function NovaServicosPage() {
         }`}
         aria-hidden={!showSticky}
       >
-        <a href="#orcamento" tabIndex={showSticky ? 0 : -1} className="flex h-12 items-center justify-center gap-2 rounded-xl bg-orange-600 font-semibold text-white">
+        <a href="#orcamento" tabIndex={showSticky ? 0 : -1} className="flex h-12 items-center justify-center gap-2 rounded-xl bg-orange-700 font-semibold text-white">
           Pedir orçamento gratuito <ArrowRight aria-hidden="true" className="h-4 w-4" />
         </a>
       </div>

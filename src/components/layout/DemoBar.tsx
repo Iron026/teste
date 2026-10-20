@@ -13,7 +13,7 @@ interface Props {
  */
 export function DemoBar({ projectSlug, projectName }: Props) {
   return (
-    <div className="relative z-[60] bg-ink-950 text-slate-300">
+    <aside aria-label="Aviso de projeto demonstrativo" className="relative z-[60] bg-ink-950 text-slate-300">
       <div className="mx-auto flex h-10 max-w-7xl items-center justify-between gap-3 px-4 text-xs sm:px-6 sm:text-[0.8rem]">
         <p className="flex min-w-0 items-center gap-2">
           <FlaskConical aria-hidden="true" className="h-3.5 w-3.5 shrink-0 text-amber-300" />
@@ -32,6 +32,6 @@ export function DemoBar({ projectSlug, projectName }: Props) {
           </Link>
         </nav>
       </div>
-    </div>
+    </aside>
   )
 }

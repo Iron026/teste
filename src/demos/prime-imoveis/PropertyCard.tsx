@@ -7,7 +7,7 @@ import { BASE, formatPrice, variantOf } from './utils'
 
 export function PropertyCard({ property: p }: { property: Property }) {
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#e8e1d4] bg-white ring-[#a67c3d] ring-offset-2 has-[:focus-visible]:ring-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgb(31_43_38/0.35)]">
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#e8e1d4] bg-white ring-[#87612a] ring-offset-2 has-[:focus-visible]:ring-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgb(31_43_38/0.35)]">
       <div className="relative aspect-[16/10] overflow-hidden bg-[#efe9dd]">
         <PropertyArt
           scene={p.gallery[0]}
@@ -24,7 +24,7 @@ export function PropertyCard({ property: p }: { property: Property }) {
         </span>
       </div>
       <div className="flex flex-1 flex-col p-5">
-        <p className="flex items-center gap-1.5 text-xs font-medium text-[#8a816f]">
+        <p className="flex items-center gap-1.5 text-xs font-medium text-[#6b6455]">
           <MapPin aria-hidden="true" className="h-3.5 w-3.5" /> {p.neighborhood}, {p.city}
         </p>
         <h3 className="mt-2 font-serif text-lg font-semibold leading-snug text-[#1f2b26]">
@@ -52,7 +52,7 @@ export function PropertyCard({ property: p }: { property: Property }) {
         </ul>
         <div className="mt-auto pt-5">
           <p className="text-xl font-bold text-[#1f2b26]">{formatPrice(p)}</p>
-          <p className="mt-0.5 h-4 text-xs text-[#8a816f]">{p.condo ? `Condomínio ${formatBRL(p.condo)}/mês` : ''}</p>
+          <p className="mt-0.5 h-4 text-xs text-[#6b6455]">{p.condo ? `Condomínio ${formatBRL(p.condo)}/mês` : ''}</p>
         </div>
       </div>
     </article>
