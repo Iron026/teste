@@ -12,6 +12,7 @@ const PrimeLayout = lazy(() => import('@/demos/prime-imoveis/PrimeLayout'))
 const PrimeHome = lazy(() => import('@/demos/prime-imoveis/PrimeHome'))
 const PrimeCatalog = lazy(() => import('@/demos/prime-imoveis/PrimeCatalog'))
 const PrimeProperty = lazy(() => import('@/demos/prime-imoveis/PrimeProperty'))
+const Gestao360Page = lazy(() => import('@/demos/gestao360/Gestao360Page'))
 // DEMO_ROUTES_IMPORTS
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="imoveis" element={<PrimeCatalog />} />
             <Route path="imovel/:id" element={<PrimeProperty />} />
           </Route>
+          <Route path="demos/gestao360" element={<Gestao360Page />} />
           {/* DEMO_ROUTES */}
         </Routes>
       </Suspense>
