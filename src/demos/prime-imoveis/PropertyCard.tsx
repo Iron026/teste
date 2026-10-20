@@ -7,7 +7,7 @@ import { BASE, formatPrice, variantOf } from './utils'
 
 export function PropertyCard({ property: p }: { property: Property }) {
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#e8e1d4] bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgb(31_43_38/0.35)]">
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#e8e1d4] bg-white ring-[#a67c3d] ring-offset-2 has-[:focus-visible]:ring-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_48px_-24px_rgb(31_43_38/0.35)]">
       <div className="relative aspect-[16/10] overflow-hidden bg-[#efe9dd]">
         <PropertyArt
           scene={p.gallery[0]}
