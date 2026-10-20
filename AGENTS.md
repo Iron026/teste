@@ -1,5 +1,9 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+# Notas para agentes e colaboradores
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+- Stack: **Vite + React 19 + TypeScript + Tailwind CSS 4 + React Router 7** (site estático; não é Next.js).
+- Comandos: `npm run dev`, `npm run build` (inclui `tsc -b`), `npm run preview`.
+- Conteúdo editável fica em `src/config/site.ts` e `src/data/*`. Não espalhe textos nos componentes.
+- Cada demonstração fica isolada em `src/demos/<projeto>/` e é carregada sob demanda em `src/App.tsx`.
+- Todo conteúdo é em português do Brasil. Projetos são demonstrativos: não invente clientes, depoimentos, números
+  de resultado nem contatos.
+- Formulários não têm backend: nunca simule um envio como se tivesse ocorrido.

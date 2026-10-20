@@ -220,7 +220,7 @@ export default function Gestao360Page() {
           </section>
 
           {/* Indicadores */}
-          <section aria-label="Indicadores" className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6">
+          <section aria-label="Indicadores" className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-3 2xl:grid-cols-6">
             <KpiCard icon={CircleDollarSign} label="Receita total" value={formatBRL(kpis.revenue)} delta={delta(kpis.revenue, prevKpis?.revenue)} />
             <KpiCard icon={Receipt} label="Despesas" value={formatBRL(kpis.expenses)} delta={delta(kpis.expenses, prevKpis?.expenses)} invert />
             <KpiCard

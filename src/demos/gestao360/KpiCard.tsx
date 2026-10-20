@@ -17,15 +17,15 @@ export function KpiCard({ icon: Icon, label, value, delta, invert = false, hint 
   const good = delta == null ? null : invert ? delta < 0 : delta > 0
   const flat = delta != null && Math.abs(delta) < 0.005
   return (
-    <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_1px_2px_rgb(15_23_42/0.04)]">
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-[0_1px_2px_rgb(15_23_42/0.04)]">
       <div className="flex items-center justify-between gap-2">
-        <p className="text-sm font-medium text-slate-500">{label}</p>
-        <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-100 text-slate-600">
+        <p className="text-xs font-medium text-slate-500 sm:text-sm">{label}</p>
+        <span className="hidden h-8 w-8 items-center justify-center rounded-lg bg-slate-100 sm:inline-flex text-slate-600">
           <Icon aria-hidden="true" className="h-4 w-4" />
         </span>
       </div>
-      <p className="mt-3 font-display text-2xl font-extrabold tracking-tight text-slate-900 tabular-nums">{value}</p>
-      <p className="mt-2 flex items-center gap-1.5 text-xs text-slate-500">
+      <p className="mt-2 font-display text-lg font-extrabold sm:mt-3 sm:text-2xl tracking-tight text-slate-900 tabular-nums">{value}</p>
+      <p className="mt-2 flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
         {delta == null ? (
           <span>{hint ?? 'Sem base de comparação'}</span>
         ) : (
