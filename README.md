@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ofício
 
-## Getting Started
+**Seu trabalho. Sua evolução.**
 
-First, run the development server:
+Aplicativo freemium para profissionais autônomos (manutenção, beleza, limpeza, alimentação e outros) organizarem clientes, agenda e finanças — e acompanharem a própria evolução profissional com níveis, missões, metas e conquistas.
+
+> Versão **0.1** · funciona no navegador do celular · dados salvos apenas no aparelho (IndexedDB).
+
+## O que tem na 0.1
+
+| Área | Recursos |
+| --- | --- |
+| Boas-vindas | Apresentação, escolha da profissão, cadastro do nome/negócio, dados de demonstração opcionais |
+| Painel | Nível e XP, receitas/despesas/saldo do mês, meta semanal, próximos serviços, pendências, missões, dica da profissão, atalhos |
+| Clientes | Cadastrar, editar, excluir, buscar, ligar, WhatsApp, histórico e total faturado |
+| Agenda | Agendar, editar, concluir (com lançamento automático da receita), cancelar, reabrir, excluir |
+| Finanças | Receitas e despesas separadas, saldo mensal, navegação por mês, gastos por categoria |
+| Evolução | Níveis, XP, missões iniciais e semanais por profissão, metas semanal/mensal, 11 conquistas, crescimento mês a mês, histórico de 6 meses, linha do tempo de XP |
+| Ajustes | Perfil, profissão, tema claro/escuro/sistema, plano (Premium “em breve”), backup exportar/importar, dados demo, apagar tudo, privacidade |
+
+## Como ver no celular
+
+Veja [docs/COMO-VISUALIZAR.md](docs/COMO-VISUALIZAR.md).
+
+## Comandos
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # servidor de desenvolvimento
+npm run check        # typecheck + lint + testes + build
+npm test             # testes automatizados (Vitest)
+npm run build        # build de produção em dist/
+npm run build:single # app inteiro em um único HTML (dist-single/)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Documentação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Arquitetura e decisões técnicas](docs/ARQUITETURA.md)
+- [Gamificação](docs/GAMIFICACAO.md)
+- [Como visualizar no celular](docs/COMO-VISUALIZAR.md)
+- [Roteiro](docs/ROTEIRO.md)
